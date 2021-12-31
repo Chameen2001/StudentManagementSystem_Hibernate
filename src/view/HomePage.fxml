@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.homePage">
+   <children>
+      <Pane prefHeight="217.0" prefWidth="600.0" styleClass="ijse_background" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Pane layoutX="34.0" layoutY="89.0" prefHeight="40.0" prefWidth="200.0" styleClass="image" />
+            <Label layoutX="364.0" layoutY="96.0" text="Student Management System" textFill="WHITE">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="123.0" text="Institute Of Java Software Engineering">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="204.0" text="version 1.01">
+               <font>
+                  <Font name="Ubuntu" size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="main_menu_root" layoutY="217.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="main_menu_panel" prefHeight="183.0" prefWidth="600.0">
+               <children>
+                  <Group fx:id="manage_student_btn" layoutX="99.0" layoutY="80.0" onMouseClicked="#manage_student_clicked" onMouseEntered="#manage_student_mouse_entered" onMouseExited="#manage_student_mouse_exited" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="41.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="39.0" stroke="BLACK" strokeType="INSIDE">
+                           <styleClass>
+                              <String fx:value="menu_item" />
+                              <String fx:value="menu_item_1" />
+                           </styleClass>
+                        </Circle>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="-16.0" layoutY="13.0" size="40" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Group>
+                  <Group fx:id="manage_program_btn" layoutX="300.0" layoutY="80.0" onMouseClicked="#manage_program_mouse_clicked" onMouseEntered="#manage_program_mouse_entered" onMouseExited="#manage_program_mouse_exited" AnchorPane.leftAnchor="261.0" AnchorPane.topAnchor="41.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="39.0" stroke="BLACK" strokeType="INSIDE">
+                           <styleClass>
+                              <String fx:value="menu_item" />
+                              <String fx:value="menu_item_2" />
+                           </styleClass>
+                        </Circle>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PRODUCT_HUNT" layoutX="-20.0" layoutY="16.0" size="40" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Group>
+                  <Group fx:id="show_detail_btn" layoutX="501.0" layoutY="80.0" onMouseEntered="#show_details_mouse_entered" onMouseExited="#show_details_mouse_exited" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="41.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="39.0" stroke="BLACK" strokeType="INSIDE">
+                           <styleClass>
+                              <String fx:value="menu_item" />
+                              <String fx:value="menu_item_3" />
+                           </styleClass>
+                        </Circle>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" layoutX="-19.0" layoutY="13.0" size="40" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Group>
+                  <Label layoutX="59.0" layoutY="127.0" text="Manage Student">
+                     <font>
+                        <Font name="Barlow Condensed Medium" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="254.0" layoutY="127.0" text="Manage Programs">
+                     <font>
+                        <Font name="Barlow Condensed Medium" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="470.0" layoutY="127.0" text="Show Details">
+                     <font>
+                        <Font name="Barlow Condensed Medium" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

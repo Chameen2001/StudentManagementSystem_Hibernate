@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="add_student_root" prefHeight="720.0" prefWidth="1024.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddStudentDetailForm">
+   <children>
+      <AnchorPane fx:id="add_student_context" layoutX="200.0" layoutY="80.0" styleClass="add_student_border">
+         <children>
+            <AnchorPane fx:id="add_student_pane" prefHeight="560.0" prefWidth="625.0">
+               <children>
+                  <Pane layoutX="135.0" layoutY="78.0" prefHeight="25.0" prefWidth="119.0" styleClass="image" />
+                  <TextField fx:id="txt_f_name" layoutX="135.0" layoutY="177.0" prefHeight="32.0" prefWidth="167.0" promptText="First Name" styleClass="text_box" />
+                  <TextField fx:id="txt_m_name" layoutX="324.0" layoutY="177.0" prefHeight="32.0" prefWidth="167.0" promptText="Middle Name" styleClass="text_box" />
+                  <TextField fx:id="txt_l_name" layoutX="135.0" layoutY="231.0" prefHeight="32.0" prefWidth="167.0" promptText="Last Name" styleClass="text_box" />
+                  <TextField fx:id="txt_nic" layoutX="135.0" layoutY="289.0" prefHeight="32.0" prefWidth="355.0" promptText="NIC" styleClass="text_box" />
+                  <TextField fx:id="txt_b_date" layoutX="324.0" layoutY="231.0" prefHeight="32.0" prefWidth="167.0" promptText="Birth Date" styleClass="text_box" />
+                  <TextField fx:id="txt_address" layoutX="134.0" layoutY="345.0" prefHeight="32.0" prefWidth="355.0" promptText="Address Line 1" styleClass="text_box" />
+                  <TextField fx:id="txt_address_2" layoutX="134.0" layoutY="398.0" prefHeight="32.0" prefWidth="355.0" promptText="Address Line 2 (Optional)" styleClass="text_box" />
+                  <Label layoutX="135.0" layoutY="116.0" text="Add Student Data">
+                     <font>
+                        <Font name="Noto Sans CJK HK" size="21.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="288.0" layoutY="501.0" onMouseClicked="#next_btn_mouse_clicked" prefHeight="32.0" prefWidth="72.0" styleClass="next_btn">
+                     <children>
+                        <Label layoutX="24.0" layoutY="7.0" text="Next" textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Medium" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <RadioButton fx:id="male" layoutX="134.0" layoutY="447.0" mnemonicParsing="false" onAction="#get_gender" text="Male" textFill="#000000b1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="female" layoutX="205.0" layoutY="447.0" mnemonicParsing="false" onAction="#get_gender" text="Female" textFill="#000000b1" toggleGroup="$gender" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

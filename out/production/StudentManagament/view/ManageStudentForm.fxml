@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="manage_student_pane" prefHeight="183.0" prefWidth="600.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageStudentForm">
+   <children>
+      <Group fx:id="add_student_btn" layoutX="109.0" layoutY="90.0" onMouseClicked="#add_student_mouse_clicked" onMouseEntered="#add_student_mouse_entered" onMouseExited="#add_student_mouse_exited" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="41.0">
+         <children>
+            <Circle fill="DODGERBLUE" radius="39.0" stroke="BLACK" strokeType="INSIDE">
+               <styleClass>
+                  <String fx:value="menu_item" />
+                  <String fx:value="menu_item_1" />
+               </styleClass>
+            </Circle>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="-16.0" layoutY="13.0" size="40" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Group>
+      <Group fx:id="update_delete_program_btn" layoutX="310.0" layoutY="90.0" onMouseClicked="#update_delete_program_mouse_clicked" onMouseEntered="#update_delete_program_mouse_entered" onMouseExited="#update_delete_program_mouse_exited" AnchorPane.leftAnchor="261.0" AnchorPane.topAnchor="41.0">
+         <children>
+            <Circle fill="DODGERBLUE" radius="39.0" stroke="BLACK" strokeType="INSIDE">
+               <styleClass>
+                  <String fx:value="menu_item" />
+                  <String fx:value="menu_item_2" />
+               </styleClass>
+            </Circle>
+            <FontAwesomeIconView fill="WHITE" glyphName="REMOVE" layoutX="-16.0" layoutY="13.0" size="40" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Group>
+      <Group fx:id="show_detail_btn" layoutX="511.0" layoutY="90.0" onMouseEntered="#show_details_mouse_entered" onMouseExited="#show_details_mouse_exited" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="41.0">
+         <children>
+            <Circle fill="DODGERBLUE" radius="39.0" stroke="BLACK" strokeType="INSIDE">
+               <styleClass>
+                  <String fx:value="menu_item" />
+                  <String fx:value="menu_item_3" />
+               </styleClass>
+            </Circle>
+            <FontAwesomeIconView fill="WHITE" glyphName="BOOK" layoutX="-19.0" layoutY="13.0" size="40" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Group>
+      <Label layoutX="66.0" layoutY="127.0" text="Add Student">
+         <font>
+            <Font name="Barlow Condensed Medium" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="254.0" layoutY="127.0" text="Update Or Delete">
+         <font>
+            <Font name="Barlow Condensed Medium" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="127.0" text="Show Details">
+         <font>
+            <Font name="Barlow Condensed Medium" size="16.0" />
+         </font>
+      </Label>
+      <Pane fx:id="back_btn" layoutX="14.0" layoutY="10.0" onMouseClicked="#back_btn_mouse_clicked" onMouseEntered="#back_btn_mouse_entered" onMouseExited="#back_btn_mouse_exited" prefHeight="23.0" prefWidth="71.0" style="-fx-background-color: #0068c4; -fx-background-radius: 10px;">
+         <children>
+            <Label layoutX="21.0" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="17.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+   </children>
+</AnchorPane>

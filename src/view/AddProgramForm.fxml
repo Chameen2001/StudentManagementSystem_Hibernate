@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="add_student_root" prefHeight="720.0" prefWidth="1024.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProgramForm">
+   <children>
+      <AnchorPane fx:id="add_student_context" layoutX="200.0" layoutY="80.0" styleClass="add_student_border">
+         <children>
+            <AnchorPane fx:id="add_student_pane" prefHeight="560.0" prefWidth="625.0">
+               <children>
+                  <Pane layoutX="135.0" layoutY="78.0" prefHeight="25.0" prefWidth="119.0" styleClass="image" />
+                  <TextField fx:id="txt_program_id" layoutX="135.0" layoutY="177.0" prefHeight="32.0" prefWidth="355.0" promptText="Program ID" styleClass="text_box" />
+                  <TextField fx:id="txt_program_name" layoutX="135.0" layoutY="231.0" prefHeight="32.0" prefWidth="355.0" promptText="Program Name" styleClass="text_box" />
+                  <TextField fx:id="txt_program_duration" layoutX="135.0" layoutY="289.0" prefHeight="32.0" prefWidth="355.0" promptText="Duration" styleClass="text_box" />
+                  <TextField fx:id="txt_program_fee" layoutX="134.0" layoutY="345.0" prefHeight="32.0" prefWidth="355.0" promptText="Fee" styleClass="text_box" />
+                  <Label layoutX="135.0" layoutY="116.0" text="Add Program">
+                     <font>
+                        <Font name="Noto Sans CJK HK" size="21.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="277.0" layoutY="426.0" onMouseClicked="#add_btn_mouse_clicked" prefHeight="32.0" prefWidth="72.0" styleClass="next_btn">
+                     <children>
+                        <Label layoutX="26.0" layoutY="7.0" text="Add" textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Medium" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

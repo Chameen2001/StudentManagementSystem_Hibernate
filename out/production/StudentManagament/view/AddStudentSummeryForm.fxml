@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="add_student_pane" prefHeight="560.0" prefWidth="625.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddStudentSummeryForm">
+    <children>
+        <Pane layoutX="37.0" layoutY="71.0" prefHeight="25.0" prefWidth="119.0" styleClass="image" />
+        <Label layoutX="38.0" layoutY="125.0" text="Summery">
+            <font>
+                <Font name="Noto Sans CJK HK" size="21.0" />
+            </font>
+        </Label>
+        <Pane fx:id="btn_enroll" layoutX="260.0" layoutY="482.0" onMouseClicked="#enroll_btn_mouse_clicked" prefHeight="32.0" prefWidth="72.0" styleClass="next_btn">
+            <children>
+                <Label layoutX="21.0" layoutY="5.0" text="Enroll" textFill="WHITE">
+                    <font>
+                        <Font name="Barlow Condensed Medium" size="15.0" />
+                    </font>
+                </Label>
+            </children>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Pane>
+      <Label layoutX="38.0" layoutY="182.0" text="Name :-" />
+      <Label layoutX="38.0" layoutY="211.0" text="Birth Date :-" />
+      <Label layoutX="38.0" layoutY="239.0" text="NIC :-" />
+      <Label layoutX="38.0" layoutY="264.0" text="Address :-" />
+      <TableView fx:id="tbl_program" layoutX="38.0" layoutY="303.0" prefHeight="155.0" prefWidth="555.0">
+         <columns>
+            <TableColumn prefWidth="93.0" text="Program ID" />
+            <TableColumn prefWidth="182.0" text="Name" />
+            <TableColumn prefWidth="157.0" text="Duration" />
+            <TableColumn prefWidth="122.0" text="Fee" />
+         </columns>
+      </TableView>
+      <Label fx:id="lbl_name" layoutX="133.0" layoutY="182.0" prefHeight="16.0" prefWidth="447.0" text="Label" />
+      <Label fx:id="lbl_birth_date" layoutX="133.0" layoutY="211.0" prefHeight="16.0" prefWidth="447.0" text="Label" />
+      <Label fx:id="lbl_nic" layoutX="133.0" layoutY="239.0" prefHeight="16.0" prefWidth="447.0" text="Label" />
+      <Label fx:id="lbl_address" layoutX="133.0" layoutY="264.0" prefHeight="16.0" prefWidth="447.0" text="Label" />
+    </children>
+</AnchorPane>
