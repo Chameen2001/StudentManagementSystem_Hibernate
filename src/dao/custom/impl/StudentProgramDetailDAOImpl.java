@@ -2,6 +2,7 @@ package dao.custom.impl;
 
 import dao.custom.StudentProgramDetailDAO;
 import entity.Program;
+import entity.Student;
 import entity.StudentProgramDetail;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -57,8 +58,9 @@ public class StudentProgramDetailDAOImpl implements StudentProgramDetailDAO {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-        String hql = "SELECT program FROM StudentProgramDetail";
+        String hql = "SELECT program FROM StudentProgramDetail WHERE student=:student";
         Query query = session.createQuery(hql);
+        query.setParameter("student",session.get(Student.class,s_id));
         ArrayList<Program> programs = (ArrayList<Program>) query.list();
 
         transaction.commit();

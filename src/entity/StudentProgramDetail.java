@@ -9,11 +9,14 @@ import java.util.Date;
 public class StudentProgramDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     Integer id;
     @CreationTimestamp
     Date reg_date;
     @ManyToOne
+    @JoinColumn(name = "student",referencedColumnName = "s_id")
     Student student;
+    @JoinColumn(name = "program",referencedColumnName = "p_id")
     @ManyToOne
     Program program;
 
