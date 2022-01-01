@@ -3,6 +3,7 @@ package controller;
 import bo.custom.ChangeProgramBO;
 import bo.custom.impl.ChangeProgramBOImpl;
 import dto.ProgramDTO;
+import dto.StudentProgramDetailDTO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
@@ -40,6 +41,20 @@ public class ChangeProgramForm {
     }
 
     public void update_btn_mouse_clicked(MouseEvent mouseEvent) {
+
+        ArrayList<StudentProgramDetailDTO> studentProgramDetailDTOS = new ArrayList<>();
+        for (ProgramTM item : tbl_selected_program.getItems()) {
+            studentProgramDetailDTOS.add(new StudentProgramDetailDTO(studentUpdateOrDeleteForm.s_id,item.getP_id()));
+        }
+        try {
+            if (changeProgramBO.update_programs(studentProgramDetailDTOS)) {
+                new Alert(Alert.AlertType.CONFIRMATION,"Update Successfully",ButtonType.OK).show();
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Update Unsuccessfully",ButtonType.OK).show();
+            }
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
 
     }
 

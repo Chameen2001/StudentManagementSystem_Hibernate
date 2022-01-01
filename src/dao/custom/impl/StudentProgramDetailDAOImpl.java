@@ -39,8 +39,22 @@ public class StudentProgramDetailDAOImpl implements StudentProgramDetailDAO {
     }
 
     @Override
-    public boolean delete(String s) throws SQLException, ClassNotFoundException {
-        return false;
+    public boolean delete(String s_id) throws SQLException, ClassNotFoundException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        String hql = "DELETE FROM StudentProgramDetail WHERE student=:student";
+        Query query = session.createQuery(hql);
+        query.setParameter("student",session.load(Student.class,s_id));
+        int i = query.executeUpdate();
+        System.out.println(i);
+        transaction.commit();
+        session.close();
+
+        if (i>0){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     @Override
@@ -66,5 +80,24 @@ public class StudentProgramDetailDAOImpl implements StudentProgramDetailDAO {
         transaction.commit();
         session.close();
         return programs;
+    }
+
+    @Override
+    public boolean isExists(String id) throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        String hql = "SELECT count(id) FROM StudentProgramDetail WHERE student=:student";
+        Query query = session.createQuery(hql);
+        query.setParameter("student",session.load(Student.class,id));
+        long count = (long) query.uniqueResult();
+
+        transaction.commit();
+        session.close();
+        if (count>0){
+            return true;
+        }else {
+            return false;
+        }
     }
 }

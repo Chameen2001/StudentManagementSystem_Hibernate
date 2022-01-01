@@ -53,6 +53,12 @@ public class StudentUpdateOrDeleteForm {
             }
         });
 
+        try {
+            clear_all();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+
 
     }
 
