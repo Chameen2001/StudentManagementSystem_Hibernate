@@ -70,4 +70,10 @@ public class ManageStudentForm {
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/StudentUpdateOrDeleteForm.fxml"))));
         stage.show();
     }
+
+    public void show_details_mouse_clicked(MouseEvent mouseEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/ViewStudentForm.fxml"))));
+        stage.show();
+    }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="840.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewProgramFormController">
+   <children>
+      <AnchorPane fx:id="add_student_context" layoutX="107.0" layoutY="44.0" styleClass="add_student_border">
+         <children>
+            <AnchorPane fx:id="add_student_pane" prefHeight="560.0" prefWidth="625.0">
+               <children>
+                  <Pane layoutX="27.0" layoutY="26.0" prefHeight="25.0" prefWidth="119.0" styleClass="image" />
+                  <Label layoutX="28.0" layoutY="58.0" text="All Programs">
+                     <font>
+                        <Font name="Noto Sans CJK HK" size="21.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tbl_program_detail" layoutX="27.0" layoutY="120.0" prefHeight="398.0" prefWidth="572.0">
+                    <columns>
+                      <TableColumn prefWidth="89.0" text="P_ID" />
+                      <TableColumn prefWidth="233.0" text="Program Name" />
+                        <TableColumn prefWidth="105.0" text="Duration" />
+                        <TableColumn prefWidth="144.0" text="Fee" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

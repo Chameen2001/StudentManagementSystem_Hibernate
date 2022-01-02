@@ -42,8 +42,10 @@ public class ManageProgramForm {
         
     }
 
-    public void update_delete_mouse_clicked(MouseEvent mouseEvent) {
-        
+    public void update_delete_mouse_clicked(MouseEvent mouseEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/ProgramUpdateOrDeleteForm.fxml"))));
+        stage.show();
     }
 
     public void show_details_mouse_entered(MouseEvent mouseEvent) {
@@ -54,8 +56,10 @@ public class ManageProgramForm {
         
     }
 
-    public void show_detail_mouse_clicked(MouseEvent mouseEvent) {
-        
+    public void show_detail_mouse_clicked(MouseEvent mouseEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/ViewProgramForm.fxml"))));
+        stage.show();
     }
 
     public void back_btn_mouse_clicked(MouseEvent mouseEvent) {

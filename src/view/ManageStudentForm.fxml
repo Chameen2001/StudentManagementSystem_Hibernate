@@ -40,7 +40,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Group>
-      <Group fx:id="show_detail_btn" layoutX="511.0" layoutY="90.0" onMouseEntered="#show_details_mouse_entered" onMouseExited="#show_details_mouse_exited" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="41.0">
+      <Group fx:id="show_detail_btn" layoutX="511.0" layoutY="90.0" onMouseClicked="#show_details_mouse_clicked" onMouseEntered="#show_details_mouse_entered" onMouseExited="#show_details_mouse_exited" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="41.0">
          <children>
             <Circle fill="DODGERBLUE" radius="39.0" stroke="BLACK" strokeType="INSIDE">
                <styleClass>

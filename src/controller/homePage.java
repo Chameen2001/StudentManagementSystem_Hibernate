@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import util.TransitionUtil;
 
@@ -85,5 +86,11 @@ public class homePage {
         timeline.getKeyFrames().add(keyFrame);
         timeline.play();
 
+    }
+
+    public void show_details_mouse_clicked(MouseEvent mouseEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/ShowStudentAndProgramForm.fxml"))));
+        stage.show();
     }
 }

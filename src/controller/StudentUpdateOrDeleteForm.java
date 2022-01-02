@@ -114,7 +114,7 @@ public class StudentUpdateOrDeleteForm {
     }
 
     public void btn_search_mouse_clicked(MouseEvent mouseEvent) {
-        System.out.println("Awaaaaa");
+
         try {
             load_table(txt_student_id.getText());
         } catch (Exception exception) {
